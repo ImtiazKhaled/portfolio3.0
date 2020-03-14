@@ -1,0 +1,66 @@
+:root {
+  --text-size: 1.9em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+  :root {
+      --text-size: 1.4em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+  :root {
+      --text-size: 1.9em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+  :root {
+      --text-size: 1.9em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  :root {
+      --text-size: 1.9em;
+  }
+}
+
+body { 
+  background-color: #161616;
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size: var(--text-size);
+  color: #ffe9ec;
+}
+
+.links {
+  text-decoration: none;
+  color: #ff8396;
+}
+
+.paragraphs {
+  padding-bottom: 20px;
+}
+
+.full-page {
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+.icons {
+  padding: 5px;
+}
+
+.footer {
+  padding-top: var(--text-size);
+  text-align: center;
+}
