@@ -4,6 +4,30 @@ import './app.css'
   
 const App = () => {
   
+  const downloadResume = () => {
+    const bodyFile = {
+      type: "GET_FILE",
+      url: "/home/imtiazkhaled07/public",
+      filename: "resume.pdf"
+    }
+    fetch('http://34.68.138.86:8080/', {
+      method: 'POST', 
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(bodyFile)    
+    })
+    .then(response => {
+      response.blob().then(blob => {
+      let url = window.URL.createObjectURL(blob);
+      let a = document.createElement('a');
+      a.href = url;
+      a.download = 'resume.pdf';
+      a.click();
+      });
+    })
+  }
+
   return  <div className='full-page'>
       <div className='paragraphs'>
           Hi, i'm Imtiaz Khaled.
@@ -23,23 +47,23 @@ const App = () => {
       <div className='paragraphs'>
         I have previously worked @<a className='links' href='https://bluetechbd.com/'><span> Bluetech Solutions, </span></a> as a frontend-developer intern, and am 
         currently working @<a className='links' href='https://www.ayokasystems.com/'><span> Ayoka Systems </span></a> as a web-application developer intern; starting fall 2020,
-        I will work @<a className='links' href='https://www.call-em-all.com/'><span> Call-Em-All </span></a> as Software Engineer Intern. 
+        I will work @<a className='links' href='https://www.call-em-all.com/'><span> Call-Em-All </span></a> as a Software Engineer Intern. 
       </div>
 
       <div className='paragraphs'>
         If you want to prepare for interviews, or just want to have some fun solving challenging problems, check out <a className='links' href='https://blazeoj.com/'><span> BlazeJudge. </span></a>
       </div>
 
-      <div className='paragraphs'>
+      {/* <div className='paragraphs'>
         If you want to know more about me and how I think feel free to check out my <a className='links' href=''><span> blog. </span></a>
-      </div> 
+      </div>  */}
 
       <div>
         <a className='links icons' href='https://github.com/ImtiazKhaled'> <GithubFilled /> </a>
         <a className='links icons' href='https://www.linkedin.com/in/imtiazkhaled/'> <LinkedinFilled /> </a>
         <a className='links icons' href='https://devpost.com/ImtiazMujtabaKhaled?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav'> <CodeFilled /> </a>
         <a className='links icons' href='mailto://imtiazkhaled07@gmail.com'> <MailFilled /> </a>
-        <a className='links icons' href=''> <FilePdfFilled /> </a>      
+        <span className='links icons' onClick={()=>downloadResume()}> <FilePdfFilled /> </span>      
       </div> 
 
       <div className='footer'>

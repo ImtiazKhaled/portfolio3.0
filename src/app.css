@@ -59,6 +59,9 @@ body {
 .icons {
   padding: 5px;
 }
+.icons:hover {
+  cursor: pointer;
+}
 
 .footer {
   padding-top: var(--text-size);
