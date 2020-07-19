@@ -5,7 +5,7 @@ import picture from '../assets/face.png'
 import resume from '../assets/imtiaz-khaled-resume.pdf'
 import './app.css'
 
-const { Header, Footer, Sider, Content } = Layout
+const { Header, Footer, Content } = Layout
   
 const App = () => {
   
@@ -37,9 +37,9 @@ const App = () => {
           Some positions I've held / will hold throughout my college career
         </div>
         <ul>
-          <li classNamonClick={()=>downloadResume()}e='internship-list'><span>Summer,  Sphomore Year</span> - <a className='links' href='https://bluetechbd.com/'><span> Bluetech Solutions</span></a>, software engieneer intern</li>
+          <li className='internship-list'><span>Summer,  Sphomore Year</span> - <a className='links' href='https://bluetechbd.com/'><span> Bluetech Solutions</span></a>, software engieneer intern</li>
           <li className='internship-list'><span>Spring & Summer,  Junior Year</span> - <a className='links' href='https://www.ayokasystems.com/'><span> Ayoka Systems</span></a>, web-application developer intern</li>
-          <li className='internship-list'><span>Fall,  Senior Year</span> - <a className='links' href='https://www.call-em-all.com/'><span> Text-Em-All</span></a>, software engieneer intern</li>
+          <li className='internship-list'><span>Fall,  Senior Year</span> - <a className='links' href='https://www.text-em-all.com/'><span> Text-Em-All</span></a>, software engieneer intern</li>
         </ul>
 
         <div className='paragraphs'>
