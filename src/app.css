@@ -1,5 +1,12 @@
+@import '~antd/dist/antd.css';
+
 :root {
   --text-size: 1.9em;
+  --body-width: 60%;
+  --link-color: darkorange;
+  --text-color: black;
+  --background-color: whitesmoke;
+  --link-color-highlight: orange;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -7,6 +14,7 @@
 @media only screen and (max-width: 600px) {
   :root {
       --text-size: 1.4em;
+      --body-width: 95%;
   }
 }
 
@@ -15,6 +23,7 @@
 @media only screen and (min-width: 600px) {
   :root {
       --text-size: 1.9em;
+      --body-width: 80%;
   }
 }
 
@@ -23,6 +32,7 @@
 @media only screen and (min-width: 768px) {
   :root {
       --text-size: 1.9em;
+      --body-width: 75%;
   }
 }
 
@@ -31,39 +41,48 @@
 @media only screen and (min-width: 992px) {
   :root {
       --text-size: 1.9em;
+      --body-width: 60%;
   }
 }
 
 body { 
-  background-color: #161616;
-  font-family: 'Baloo Chettan 2', cursive;
-  font-size: var(--text-size);
-  color: #ffe9ec;
+  background-color: var(--background-color);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--body-width);
 }
 
 .links {
   text-decoration: none;
-  color: #ff8396;
+  color: var(--link-color);
 }
 
-.paragraphs {
-  padding-bottom: 20px;
+.links:hover {
+  color: var(--link-color-highlight)
 }
 
-.full-page {
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 5px;
+.text {
+  font-size: var(--text-size);
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  text-align: center;
 }
 
 .icons {
   padding: 5px;
 }
+
 .icons:hover {
   cursor: pointer;
 }
 
-.footer {
-  padding-top: var(--text-size);
-  text-align: center;
+.paragraphs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.internship-list {
+  list-style: none;
 }
