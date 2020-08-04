@@ -50,7 +50,7 @@ const App = () => {
       <a className='links icons' href='https://devpost.com/ImtiazMujtabaKhaled?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav'> <CodeFilled /> </a>
       <a className='links icons' href='https://blazeoj.com/u/ImtiazKhaled'> <FireFilled /> </a>
       <a className='links icons' href='mailto://imtiazkhaled07@gmail.com'> <MailFilled /> </a>
-      <a className='links icons' href={resume} target='_blank'> <FilePdfFilled /> </a>      
+      <a className='links icons' href={resume} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>      
     </div> 
   </Content>
 
