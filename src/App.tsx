@@ -1,12 +1,16 @@
-import React from 'react';
-import { Layout, Avatar } from 'antd'
+import React, { useState } from 'react';
+import { Layout } from 'antd'
 import { GithubFilled, CodeFilled, LinkedinFilled, FireFilled, MailFilled, FilePdfFilled } from '@ant-design/icons'
-import picture from './assets/face.png'
-import resume from './assets/imtiaz-khaled-resume.pdf'
+import Face from './assets/face.png'
+import FaceHover from './assets/face_hover.png'
+import Resume from './assets/imtiaz-khaled-resume.pdf'
 import './App.css'
 
 const { Header, Footer, Content } = Layout
 const App = () => {
+  
+  var [ DisplayPicture, SetDisplay ] = useState(Face)
+  
   return <Layout>
       
   <Header className="text">
@@ -14,10 +18,14 @@ const App = () => {
   </Header>
 
   <Content className="text">
-    <div>
-      <Avatar 
-        size={250} 
-        src={picture}
+    <div
+    >
+      <img
+        height={250}
+        onMouseEnter={() => SetDisplay(FaceHover)}
+        onMouseLeave={() => SetDisplay(Face)}   
+        src={DisplayPicture}
+        alt="My Bitmoji" 
       />
     </div>
     <div className='paragraphs remove-top'>
@@ -50,7 +58,7 @@ const App = () => {
       <a className='links icons' href='https://devpost.com/ImtiazMujtabaKhaled?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav'> <CodeFilled /> </a>
       <a className='links icons' href='https://blazeoj.com/u/ImtiazKhaled'> <FireFilled /> </a>
       <a className='links icons' href='mailto://imtiazkhaled07@gmail.com'> <MailFilled /> </a>
-      <a className='links icons' href={resume} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>      
+      <a className='links icons' href={Resume} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>      
     </div> 
   </Content>
 
