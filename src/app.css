@@ -1,6 +1,7 @@
 @import '~antd/dist/antd.css';
 
 :root {
+  --small-text-size: 1em;
   --text-size: 1.9em;
   --body-width: 60%;
   --link-color: darkorange;
@@ -13,6 +14,7 @@
 
 @media only screen and (max-width: 600px) {
   :root {
+      --small-text-size: 1em;
       --text-size: 1.4em;
       --body-width: 95%;
   }
@@ -22,6 +24,7 @@
 
 @media only screen and (min-width: 600px) {
   :root {
+    --small-text-size: 1em;
       --text-size: 1.9em;
       --body-width: 80%;
   }
@@ -31,6 +34,7 @@
 
 @media only screen and (min-width: 768px) {
   :root {
+      --small-text-size: 1em;
       --text-size: 1.9em;
       --body-width: 75%;
   }
@@ -40,6 +44,7 @@
 
 @media only screen and (min-width: 992px) {
   :root {
+      --small-text-size: 1em;
       --text-size: 1.9em;
       --body-width: 60%;
   }
@@ -89,4 +94,41 @@ body {
 
 .internship-list {
   list-style: none;
+}
+
+.language-container {
+  font-size: var(--small-text-size);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  text-align: right;
+}
+
+.color-container {
+  font-size: var(--small-text-size);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.face {
+  cursor: pointer;
+}
+
+.ant-col {
+  background-color: var(--background-color);
+}
+
+.ant-dropdown-menu {
+  box-shadow: none;
+  background-color: var(--background-color);
+  min-width: 0;
+  text-align: right;
+}
+
+.ant-dropdown-menu-item {
+  color: var(--text-color);  
+}
+
+.ant-dropdown-menu-item:hover {
+  color: var(--link-color);  
 }
