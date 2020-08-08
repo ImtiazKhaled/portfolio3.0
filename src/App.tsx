@@ -3,7 +3,7 @@ import { Layout, Row, Col } from 'antd'
 import './App.css'
 import Links from './components/Links'
 import Face from './components/Face'
-import LanguagePicker from './components/LanguagePicker'
+// import LanguagePicker from './components/LanguagePicker'
 
 const { Footer, Content } = Layout
 const App = () => {
