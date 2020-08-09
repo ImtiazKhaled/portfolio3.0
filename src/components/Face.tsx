@@ -10,7 +10,10 @@ const Face = () => {
     var [ DisplayPicture, SetDisplayPicture ] = useState(FaceNormal)
     var [ NumClicked, IncrementClick ] = useState(0)
     var [ InCoolDown, UpdateCoolDown ] = useState(false)
-    
+
+    const isMobileDevice = ():boolean => {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+    };
 
     const handleMouseDown = () => {
         if(!InCoolDown) {
@@ -32,8 +35,9 @@ const Face = () => {
                 if(`/static${currPicParsed[1]}`=== FaceNormal)
                     SetDisplayPicture(FaceNormal)
                 else if(
-                    `/static${currPicParsed[1]}`=== FaceClick || 
-                    `/static${currPicParsed[1]}`=== FaceClickExtra
+                    (`/static${currPicParsed[1]}`=== FaceClick || 
+                    `/static${currPicParsed[1]}`=== FaceClickExtra) && 
+                    !isMobileDevice()
                 )
                     SetDisplayPicture(FaceHover)
                 else 
