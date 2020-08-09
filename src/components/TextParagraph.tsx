@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import convert from 'htmr'
 
 const TextParagraph = (props: TextParagraphProps) => {
 
@@ -22,6 +23,7 @@ const TextParagraph = (props: TextParagraphProps) => {
                 return
             })
 
+        text = `<span> ${text} </span>`
         setDisplayText(text)
         setLoading(false)
         
@@ -32,11 +34,11 @@ const TextParagraph = (props: TextParagraphProps) => {
     const RenderText = () => {
         switch(props.type) {
             case 'paragraph':
-                return <div className='paragraphs' dangerouslySetInnerHTML={{__html: displayText}} />
+                return <div className='paragraphs'> {convert(displayText)} </div>
             case 'list':
-                return <span className='paragraphs' dangerouslySetInnerHTML={{__html: displayText}} />
+                return <span className='paragraphs'> {convert(displayText)} </span>
             default:
-                return <div className='paragraphs' dangerouslySetInnerHTML={{__html: displayText}} />
+                return <div className='paragraphs'> {convert(displayText)} </div>
         } 
     }
 
