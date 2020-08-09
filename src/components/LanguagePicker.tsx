@@ -1,23 +1,29 @@
 import React, { useState } from 'react'
 import { Menu, Dropdown } from 'antd'
 
-const LanguagePicker = () => {
+const LanguagePicker = (props: LanguagePickerProps) => {
+
     var [ SelectedLanguage, ChangeLanguage ] = useState('en')
 
     const LanguageMenu = () => {
         return <Menu
             onClick={(item) => ChangeLanguage(item.key.toString())}
         >
-            <Menu.Item key='en'>
-                English
-            </Menu.Item>
-            <Menu.Item key='es'>
-                Spanish
-            </Menu.Item>
+            {
+                props.languages ? props.languages.map( language => 
+                    <Menu.Item key={language.key}>
+                        {language.displayText}
+                    </Menu.Item>
+                ) : <div />
+            }
         </Menu>
     }
 
-    return <Dropdown
+    return props.languages && 
+    ( props.languages.length === 1 ||
+    props.languages.length === 0) ? 
+    <div /> :
+    <Dropdown
         overlay={LanguageMenu} 
         placement='bottomRight'
         className='language-container'
@@ -26,6 +32,7 @@ const LanguagePicker = () => {
             lang { SelectedLanguage }
         </div>
     </Dropdown>
+
 }
 
 export default LanguagePicker

@@ -1,0 +1,104 @@
+{
+  "header": "Hi, i'm Imtiaz,",
+  "languages": [],
+  "content": [
+    {
+      "type": "picture",
+      "data": {}
+    },
+    {
+      "type": "text-paragraph",
+      "data": {
+        "links": [
+          { "linkText": "Bangladesh", "link": "https://en.wikipedia.org/wiki/Bangladesh" },
+          { "linkText": "Computer Science", "link": "https://cse.uta.edu/" },
+          { "linkText": "The University of Texas, Arlington", "link": "https://www.uta.edu/" }
+        ],
+        "text": "I was born and raised in Bangladesh, and currently stay in Texas, studying  Computer Science @ The University of Texas, Arlington.",
+        "type": "paragraph"
+      }
+    },
+    {
+      "type": "text-paragraph",
+      "data": {
+        "links": [
+          { "linkText": "hackathons", "link": "https://www.theshorthorn.com/news/for-uta-student-hackathon-team-winning-is-in-the-code/article_133c3eb8-6de8-11e9-a1f8-1bf4fa4b99df.html"},
+          { "linkText": "different technologies", "link": "https://octoprofile.now.sh/user?id=ImtiazKhaled"}
+        ],
+        "text": "I've won some stuff at a bunch of different hackathons, and find myself working on all sorts of projects, using all kinds of different technologies.",
+        "type": "paragraph"
+      }
+    },
+    {
+      "type": "list-paragraph",
+      "data": {
+        "main": {
+          "links": [],
+          "text": "Some positions I've held throughout my college career.",
+          "type": "paragraph"
+        },
+        "list": [
+          {
+            "links": [
+              {"linkText": "Bluetech Solutions", "link": "https://bluetechbd.com/" }
+            ],
+            "text": "Summer,  Sphomore Year Bluetech Solutions, software engieneer intern",
+            "type": "list"
+          },
+          {
+            "links": [
+              {"linkText": "Ayoka Systems", "link": "https://www.ayokasystems.com/" }
+            ],
+            "text": "Spring & Summer,  Junior Year Ayoka Systems, web-application developer intern.",
+            "type": "list"
+          },
+          {
+            "links": [
+              {"linkText": "Text-Em-All", "link": "https://www.text-em-all.com/" }
+            ],
+            "text": "Fall,  Senior Year Text-Em-All, software engieneer intern.",
+            "type": "list"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text-paragraph",
+      "data": {
+        "links": [
+          {"linkText": "BlazeJudge", "link": "https://blazeoj.com/" }
+        ],
+        "text": "If you want to prepare for interviews, or just want to have some fun solving challenging problems, check out BlazeJudge.",
+        "type": "paragraph"
+      }
+    },
+    {
+      "type": "social-links",
+      "data": {
+        "links": [
+          {
+            "type": "github",
+            "link": "https://github.com/ImtiazKhaled"
+          },
+          {
+            "type": "linkedin",
+            "link": "https://www.linkedin.com/in/imtiazkhaled/"
+          },
+          {
+            "type": "devpost",
+            "link": "https://devpost.com/ImtiazMujtabaKhaled"
+          },
+          {
+            "type": "blazeoj",
+            "link": "https://blazeoj.com/u/ImtiazKhaled"
+          },
+          {
+            "type": "mail",
+            "link": "mailto://imtiazkhaled07@gmail.com"
+          }
+        ]
+      }
+    }
+  ]
+}
+  

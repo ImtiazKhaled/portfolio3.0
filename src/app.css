@@ -114,6 +114,14 @@ body {
   cursor: pointer;
 }
 
+.footer-text {
+  font-size: var(--small-text-size);
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  text-align: center;
+}
+
 .ant-col {
   background-color: var(--background-color);
 }
