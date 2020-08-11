@@ -33,7 +33,7 @@ const App = () => {
       <Col span={4} className='color-container'>
         {/* color */}
       </Col>
-      <Col span={16} className='text'>
+      <Col span={16} className='text add-top'>
           {data.header}
       </Col>
       <Col span={4}>
