@@ -1,6 +1,12 @@
 {
   "header": "Hi, i'm Imtiaz,",
   "languages": [],
+  "theme": {
+    "link-color": "darkorange",
+    "text-color": "black",
+    "background-color": "whitesmoke",
+    "link-color-highlight": "orange"
+  },
   "content": [
     {
       "type": "picture",

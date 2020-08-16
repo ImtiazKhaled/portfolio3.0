@@ -92,6 +92,10 @@ body {
   padding-top: 0px;
 }
 
+.add-top {
+  padding-top: 10px;
+}
+
 .internship-list {
   list-style: none;
 }

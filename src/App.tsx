@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Layout, Row, Col } from 'antd'
 import './App.css'
 import Links from './components/Links'
@@ -11,6 +11,13 @@ import data from './data.json'
 const { Footer, Content } = Layout
 
 const App = () => {
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--link-color', data.theme['link-color'])
+    document.documentElement.style.setProperty('--text-color', data.theme['text-color'])
+    document.documentElement.style.setProperty('--background-color', data.theme['background-color'])
+    document.documentElement.style.setProperty('--link-color-highlight', data.theme['link-color-highlight'])
+  },[])
   
   const GenerateBody = (section : any) => {
     switch(section.type) {
