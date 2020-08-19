@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Layout, Row, Col } from 'antd'
 import './App.css'
 import Links from './components/Links'
-import Face from './components/Face'
+import Picture from './components/Picture'
 import LanguagePicker from './components/LanguagePicker'
 import TextParagraph from './components/TextParagraph'
 import ListParagraph from './components/ListParagraph'
@@ -22,7 +22,7 @@ const App = () => {
   const GenerateBody = (section : any) => {
     switch(section.type) {
       case 'picture':
-        return <Face />
+        return <Picture {...section.data} />
       case 'text-paragraph':
         return <TextParagraph {...section.data} />
       case 'list-paragraph':

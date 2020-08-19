@@ -10,7 +10,13 @@
   "content": [
     {
       "type": "picture",
-      "data": {}
+      "data": {
+        "alt": "imtiaz_face",
+        "face": "https://storage.googleapis.com/imkkhld/faces/imtiaz/face.png",
+        "face_hover": "https://storage.googleapis.com/imkkhld/faces/imtiaz/face_hover.png",
+        "face_click": "https://storage.googleapis.com/imkkhld/faces/imtiaz/face_click.png",
+        "face_click_extra": "https://storage.googleapis.com/imkkhld/faces/imtiaz/face_click_extra.png"
+      }
     },
     {
       "type": "text-paragraph",
@@ -101,6 +107,10 @@
           {
             "type": "mail",
             "link": "mailto://imtiazkhaled07@gmail.com"
+          },
+          {
+            "type": "resume",
+            "link": "https://storage.googleapis.com/imkkhld/portfolio-site/imtiaz-khaled-resume.pdf"
           }
         ]
       }

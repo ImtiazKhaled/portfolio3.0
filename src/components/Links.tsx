@@ -7,7 +7,6 @@ import {
     TwitterCircleFilled, DribbbleSquareFilled,
     YoutubeFilled, MediumSquareFilled
 } from '@ant-design/icons'
-import Resume from '../assets/imtiaz-khaled-resume.pdf'
 
 const Links = (props : SocialLinksProps) => {
 
@@ -35,8 +34,10 @@ const Links = (props : SocialLinksProps) => {
                 return <a className='links icons' href={link.link}> <FacebookFilled /> </a>
             case 'mail':
                 return <a className='links icons' href={link.link}> <MailFilled /> </a>
+            case 'resume':
+                return <a className='links icons' href={link.link} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>
             default:
-                return <div />
+                return <span />
         }
     }
 
@@ -44,7 +45,6 @@ const Links = (props : SocialLinksProps) => {
         {
             props.links ? props.links.map( (link: SocialLink) => <span key={link.type}> { RenderLink(link) } </span> ) : <div />
         }
-        <a className='links icons' href={Resume} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>      
     </div> 
 }
 

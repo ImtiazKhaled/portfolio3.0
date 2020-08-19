@@ -1,10 +1,12 @@
 import React, { useState, useRef } from 'react'
-import FaceNormal from '../assets/face.png'
-import FaceHover from '../assets/face_hover.png'
-import FaceClick from '../assets/face_click.png'
-import FaceClickExtra from '../assets/face_click_extra.png'
 
-const Face = () => {
+
+const Picture = (props: PictureProps) => {
+
+    const FaceNormal = props.face
+    const FaceHover = props.face_hover
+    const FaceClick = props.face_click
+    const FaceClickExtra = props.face_click_extra
 
     var faceRef = useRef<HTMLImageElement>(null)
     var [ DisplayPicture, SetDisplayPicture ] = useState(FaceNormal)
@@ -69,9 +71,9 @@ const Face = () => {
             onMouseEnter={() => handleMouseEnter()}
             onMouseLeave={() => handleMouseLeave()}   
             src={DisplayPicture}
-            alt='My Bitmoji' 
+            alt={props.alt}
         />
     </div>
 }
 
-export default Face
+export default Picture

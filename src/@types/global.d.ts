@@ -36,4 +36,12 @@ type SocialLinksProps = {
     links: Array<SocialLink>
 }
 
+type PictureProps = {
+    alt: string,
+    face: string,
+    face_hover: string,
+    face_click: string,
+    face_click_extra: string
+}
+
 /// ends types for props
