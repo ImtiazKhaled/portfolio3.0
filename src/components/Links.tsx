@@ -11,34 +11,50 @@ import {
 const Links = (props : SocialLinksProps) => {
 
     const RenderLink = (link: SocialLink) => {
+        
+        let icon : React.ReactElement;
+
         switch(link.type) {
             case 'github':
-                return <a className='links icons' href={link.link}> <GithubFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <GithubFilled /> </a>
+                break
             case 'linkedin':
-                return <a className='links icons' href={link.link}> <LinkedinFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <LinkedinFilled /> </a>
+                break
             case 'devpost':
-                return <a className='links icons' href={link.link}> <CodeFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <CodeFilled /> </a>
+                break
             case 'blazeoj':
-                return <a className='links icons' href={link.link}> <FireFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <FireFilled /> </a>
+                break
             case 'instagram':
-                return <a className='links icons' href={link.link}> <InstagramFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <InstagramFilled /> </a>
+                break
             case 'twitter':
-                return <a className='links icons' href={link.link}> <TwitterCircleFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <TwitterCircleFilled /> </a>
+                break
             case 'dribble':
-                return <a className='links icons' href={link.link}> <DribbbleSquareFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <DribbbleSquareFilled /> </a>
+                break
             case 'youtube':
-                return <a className='links icons' href={link.link}> <YoutubeFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <YoutubeFilled /> </a>
+                break
             case 'medium':
-                return <a className='links icons' href={link.link}> <MediumSquareFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <MediumSquareFilled /> </a>
+                break
             case 'facebook':
-                return <a className='links icons' href={link.link}> <FacebookFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <FacebookFilled /> </a>
+                break
             case 'mail':
-                return <a className='links icons' href={link.link}> <MailFilled /> </a>
+                icon = <a className='links icons' href={link.link}> <MailFilled /> </a>
+                break
             case 'resume':
-                return <a className='links icons' href={link.link} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>
+                icon = <a className='links icons' href={link.link} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>
             default:
-                return <span />
+                break
         }
+
+        return icon
     }
 
     return <div>

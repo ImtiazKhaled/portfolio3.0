@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Layout, Row, Col } from 'antd'
-import './App.css'
+import './app.css'
 import Links from './components/Links'
 import Picture from './components/Picture'
 import LanguagePicker from './components/LanguagePicker'
@@ -26,7 +26,7 @@ const App = () => {
       case 'text-paragraph':
         return <TextParagraph {...section.data} />
       case 'list-paragraph':
-        return <ListParagraph {...section.data} />
+        return <ListParagraph main={section.main} list={section.list} text={section.text} />
       case 'social-links':
         return <Links {...section.data} />
       default:

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import convert from 'htmr'
 
-const TextParagraph = (props: TextParagraphProps) => {
+const TextParagraph = (props) => {
 
     var [ displayText, setDisplayText ] = useState('')
     var [ loading, setLoading ] = useState(false)
@@ -28,6 +28,12 @@ const TextParagraph = (props: TextParagraphProps) => {
         setLoading(false)
         
         return 
+        
+        let totalAmount = 0
+        const taxAmount = props.tax ?? 30.00
+        const costAmount = props.cost ?? 30.00
+        totalAmount = taxAmount + costAmount
+        console.log(`when the tax is ${taxAmount} and the cost is ${costAmount} then the total amount is ${totalAmount}`)
 
     }, [props]);
 

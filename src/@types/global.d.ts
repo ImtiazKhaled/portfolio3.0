@@ -11,6 +11,8 @@ type TextParagraphProps = {
     type: string
     links: Array<Link>
     text: string
+    tax: number
+    cost: number
 }
 
 type Language = {
