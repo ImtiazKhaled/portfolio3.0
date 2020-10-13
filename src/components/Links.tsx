@@ -50,7 +50,9 @@ const Links = (props : SocialLinksProps) => {
                 break
             case 'resume':
                 icon = <a className='links icons' href={link.link} target='_blank' rel="noopener noreferrer"> <FilePdfFilled /> </a>
+                break
             default:
+                icon = <span />
                 break
         }
 

@@ -26,7 +26,7 @@ const App = () => {
       case 'text-paragraph':
         return <TextParagraph {...section.data} />
       case 'list-paragraph':
-        return <ListParagraph main={section.main} list={section.list} text={section.text} />
+        return <ListParagraph {...section.data} />
       case 'social-links':
         return <Links {...section.data} />
       default:
